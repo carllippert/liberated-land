@@ -1,0 +1,66 @@
+name: Deploy to Hetzner
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts || true
+          if [ -n "${{ secrets.SSH_PORT }}" ]; then
+            ssh-keyscan -p ${{ secrets.SSH_PORT }} -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts || true
+          fi
+      
+      - name: Prepare static files
+        run: |
+          mkdir -p dist
+          cp index.html dist/
+          cp style.css dist/
+          cp app.js dist/
+          cp -r data dist/
+      
+      - name: Deploy to Hetzner
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_PORT: ${{ secrets.SSH_PORT || '22' }}
+        run: |
+          RELEASE_PATH="/srv/apps/liberated-land/releases/${{ github.sha }}"
+          CURRENT_PATH="/srv/apps/liberated-land/current"
+          
+          # Create release directory
+          ssh -i ~/.ssh/deploy_key -p ${SSH_PORT} ${SSH_USER}@${SSH_HOST} "mkdir -p ${RELEASE_PATH}"
+          
+          # Rsync files
+          rsync -avz --delete -e "ssh -i ~/.ssh/deploy_key -p ${SSH_PORT}" \
+            dist/ ${SSH_USER}@${SSH_HOST}:${RELEASE_PATH}/
+          
+          # Update symlink
+          ssh -i ~/.ssh/deploy_key -p ${SSH_PORT} ${SSH_USER}@${SSH_HOST} "ln -sfn ${RELEASE_PATH} ${CURRENT_PATH}"
+          
+          echo "Deployed to ${SSH_HOST}:${RELEASE_PATH}"
+          echo "Current symlink points to ${CURRENT_PATH}"
+      
+      - name: Cleanup old releases
+        if: success()
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_PORT: ${{ secrets.SSH_PORT || '22' }}
+        run: |
+          # Keep only the 5 most recent releases
+          ssh -i ~/.ssh/deploy_key -p ${SSH_PORT} ${SSH_USER}@${SSH_HOST} \
+            "cd /srv/apps/liberated-land/releases && ls -t | tail -n +6 | xargs -r rm -rf"

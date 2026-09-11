@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  overflow: hidden;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+#controls {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.control-panel,
+.about-panel {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  max-width: 300px;
+}
+
+.control-panel h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.control-panel label {
+  display: block;
+  margin: 8px 0;
+  cursor: pointer;
+  font-size: 14px;
+  color: #555;
+}
+
+.control-panel input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.about-panel button {
+  width: 100%;
+  padding: 10px;
+  background: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.about-panel button:hover {
+  background: #34495e;
+}
+
+#about-content {
+  margin-top: 15px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #333;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+#about-content.hidden {
+  display: none;
+}
+
+#about-content h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+#about-content h4 {
+  font-size: 14px;
+  margin: 12px 0 6px;
+  color: #34495e;
+}
+
+#about-content ul {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+#about-content li {
+  margin: 4px 0;
+}
+
+#about-content p {
+  margin-bottom: 10px;
+}
+
+#about-content a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+#about-content a:hover {
+  text-decoration: underline;
+}
+
+.maplibregl-popup-content {
+  max-width: 350px;
+  padding: 15px;
+}
+
+.popup-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #2c3e50;
+}
+
+.popup-thesis {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.popup-thesis.airport {
+  background: #3498db;
+  color: white;
+}
+
+.popup-thesis.waterfront {
+  background: #16a085;
+  color: white;
+}
+
+.popup-risk {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: 600;
+  margin-left: 6px;
+}
+
+.popup-risk.L {
+  background: #27ae60;
+  color: white;
+}
+
+.popup-risk.M {
+  background: #f39c12;
+  color: white;
+}
+
+.popup-risk.R {
+  background: #e74c3c;
+  color: white;
+}
+
+.popup-why {
+  margin: 10px 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #555;
+}
+
+.popup-urls {
+  margin-top: 10px;
+}
+
+.popup-urls a {
+  display: block;
+  font-size: 12px;
+  color: #3498db;
+  text-decoration: none;
+  margin: 4px 0;
+  word-break: break-all;
+}
+
+.popup-urls a:hover {
+  text-decoration: underline;
+}
+
+.popup-note {
+  margin-top: 8px;
+  font-size: 11px;
+  font-style: italic;
+  color: #888;
+}
+
+@media (max-width: 768px) {
+  #controls {
+    top: auto;
+    bottom: 10px;
+    right: 10px;
+    left: 10px;
+  }
+  
+  .control-panel,
+  .about-panel {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Airport Access Flips & Residual Waterfront Buildability</title>
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.5.2/dist/maplibre-gl.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="map"></div>
+  
+  <div id="controls">
+    <div class="control-panel">
+      <h2>Layers</h2>
+      <label>
+        <input type="checkbox" id="toggle-airports" checked>
+        Airport EV/AV candidates
+      </label>
+      <label>
+        <input type="checkbox" id="toggle-waterfront" checked>
+        Waterfront residual candidates
+      </label>
+    </div>
+    
+    <div class="about-panel">
+      <button id="about-toggle">About</button>
+      <div id="about-content" class="hidden">
+        <h3>Airport Access Flips & Residual Waterfront Buildability</h3>
+        <p><strong>Public curiosity map — not a brokerage product.</strong></p>
+        
+        <h4>What this shows</h4>
+        <ul>
+          <li><strong>Airport candidates:</strong> Places where AV curb access exists or is emerging near major airports. Note: AV service area ≠ metro geofence. Many airports remain outside permitted zones.</li>
+          <li><strong>Waterfront residual:</strong> Ferry-served or marine-access locations that survive NFHL flood map and CBRS filters. Flood zones, insurance costs, and coastal hazards dominate—robots don't erase those risks.</li>
+        </ul>
+        
+        <h4>Sourcing</h4>
+        <p>All points include sourced WHY and reference URLs where available. No invented metrics. No buy recommendations. Risk ratings (L/M/R) reflect NFHL/CBRS/insurance honesty.</p>
+        
+        <h4>Stack</h4>
+        <p>Static MapLibre GL JS + OpenFreeMap basemap. No tracking. No API keys. Deployable to basic nginx.</p>
+        
+        <h4>Disclaimer</h4>
+        <p>This is exploratory research, not investment advice. Coastal flood zones, CBRS designations, and insurance availability dominate waterfront buildability decisions. Autonomous vehicle service areas are highly restricted and subject to change. Always verify current permits, geofences, and regulatory status.</p>
+        
+        <p><a href="https://github.com/carllippert/liberated-land" target="_blank">View on GitHub</a></p>
+      </div>
+    </div>
+  </div>
+  
+  <script src="https://unpkg.com/maplibre-gl@4.5.2/dist/maplibre-gl.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
