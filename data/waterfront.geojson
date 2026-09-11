@@ -1,0 +1,113 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-68.8, 44.3]
+      },
+      "properties": {
+        "id": "maine-islands",
+        "name": "Maine islands / marine access communities",
+        "thesis": "waterfront",
+        "risk": "M",
+        "why": "Marine access communities, post-NFHL/CBRS filter. Flood and insurance risks remain; robots don't erase coastal hazards.",
+        "urls": [],
+        "note": "Approximate coordinates"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-70.099, 41.268]
+      },
+      "properties": {
+        "id": "nantucket",
+        "name": "Nantucket",
+        "thesis": "waterfront",
+        "risk": "M",
+        "why": "Ferry-served island, residual buildability after NFHL/CBRS/insurance honesty. Flood/insurance dominate.",
+        "urls": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-70.603, 41.389]
+      },
+      "properties": {
+        "id": "marthas-vineyard",
+        "name": "Martha's Vineyard",
+        "thesis": "waterfront",
+        "risk": "M",
+        "why": "Ferry-served island, residual buildability after NFHL/CBRS/insurance honesty. Flood/insurance dominate.",
+        "urls": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-118.416, 33.395]
+      },
+      "properties": {
+        "id": "catalina",
+        "name": "Catalina Island",
+        "thesis": "waterfront",
+        "risk": "L",
+        "why": "Ferry-served island, residual buildability after NFHL/CBRS filter. Lower flood risk than Atlantic coast.",
+        "urls": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-123.0, 48.5]
+      },
+      "properties": {
+        "id": "san-juan-islands",
+        "name": "San Juan Islands",
+        "thesis": "waterfront",
+        "risk": "L",
+        "why": "Ferry-served islands, residual buildability after NFHL/CBRS filter. Lower flood risk.",
+        "urls": [],
+        "note": "Approximate coordinates"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-135.0, 57.0]
+      },
+      "properties": {
+        "id": "se-alaska-ferry",
+        "name": "SE Alaska ferry towns",
+        "thesis": "waterfront",
+        "risk": "L",
+        "why": "Alaska Marine Highway communities, residual buildability. Lower flood risk.",
+        "urls": [],
+        "note": "Approximate coordinates"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-85.518, 45.745]
+      },
+      "properties": {
+        "id": "beaver-island",
+        "name": "Beaver Island (MI)",
+        "thesis": "waterfront",
+        "risk": "L",
+        "why": "Ferry-served island, freshwater. No coastal flood zone issues.",
+        "urls": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,236 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-118.406, 33.947]
+      },
+      "properties": {
+        "id": "lax-westchester",
+        "name": "LAX / Westchester",
+        "thesis": "airport",
+        "why": "Waymo rings LAX but LAX carved out; hotel/Westchester + shuttle workaround",
+        "urls": [
+          "https://support.google.com/waymo/answer/14298153",
+          "https://getridewise.com/blog/robotaxi-airport-access-us-airports"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.395, 37.607]
+      },
+      "properties": {
+        "id": "sfo-rcc",
+        "name": "SFO RCC / Millbrae",
+        "thesis": "airport",
+        "why": "Waymo at RCC/Grand Hyatt only + AirTrain; Skycharger DCFC",
+        "urls": [
+          "https://support.google.com/waymo/answer/14298153"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-115.152, 36.081]
+      },
+      "properties": {
+        "id": "las-zoox",
+        "name": "LAS Zoox",
+        "thesis": "airport",
+        "why": "Sep 2026 commercial Zoox airport rides",
+        "urls": [
+          "https://techcrunch.com/2026/09/03/amazons-zoox-expands-its-robotaxi-service-to-las-vegas-airport/"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-104.673, 39.861]
+      },
+      "properties": {
+        "id": "den-e470",
+        "name": "DEN / E-470 / Aurora",
+        "thesis": "airport",
+        "why": "Far hub + toll belt; Aerotropolis Parkway",
+        "urls": [
+          "https://getridewise.com/blog/robotaxi-airport-access-us-airports"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-83.353, 42.212]
+      },
+      "properties": {
+        "id": "dtw-romulus",
+        "name": "DTW / Romulus Supercharger",
+        "thesis": "airport",
+        "why": "Large Tesla Supercharger near DTW",
+        "urls": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-117.601, 34.056]
+      },
+      "properties": {
+        "id": "ont-archibald",
+        "name": "ONT / Archibald",
+        "thesis": "airport",
+        "why": "SB Express Lanes exits",
+        "urls": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-117.868, 33.676]
+      },
+      "properties": {
+        "id": "sna-405",
+        "name": "SNA / 405 Express",
+        "thesis": "airport",
+        "why": "Managed lanes serving John Wayne",
+        "urls": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-98.470, 29.534]
+      },
+      "properties": {
+        "id": "sat-curb",
+        "name": "SAT curb",
+        "thesis": "airport",
+        "why": "Waymo terminal curb",
+        "urls": [
+          "https://support.google.com/waymo/answer/14298153"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-112.012, 33.434]
+      },
+      "properties": {
+        "id": "phx-skytrain",
+        "name": "PHX Sky Train",
+        "thesis": "airport",
+        "why": "Waymo curb + Sky Train nodes",
+        "urls": [
+          "https://support.google.com/waymo/answer/14298153"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-97.722, 30.194]
+      },
+      "properties": {
+        "id": "aus-del-valle",
+        "name": "Del Valle / AUS",
+        "thesis": "airport",
+        "why": "Testing/permit watch; no revenue AV curb yet",
+        "urls": [
+          "https://getridewise.com/blog/robotaxi-airport-access-us-airports"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-95.341, 29.984]
+      },
+      "properties": {
+        "id": "iah-greenspoint",
+        "name": "IAH / Greenspoint",
+        "thesis": "airport",
+        "why": "Waymo Houston but IAH outside geofence",
+        "urls": [
+          "https://support.google.com/waymo/answer/14298153"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-121.929, 37.363]
+      },
+      "properties": {
+        "id": "sjc-terminal-b",
+        "name": "SJC Terminal B RCC",
+        "thesis": "airport",
+        "why": "Waymo at RCC not curb",
+        "urls": [
+          "https://support.google.com/waymo/answer/14298153"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-118.416, 33.914]
+      },
+      "properties": {
+        "id": "el-segundo",
+        "name": "El Segundo / LAX south fringe",
+        "thesis": "airport",
+        "why": "Waymo LA footprint outside airport permit",
+        "urls": [
+          "https://support.google.com/waymo/answer/14298153"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-96.851, 32.847]
+      },
+      "properties": {
+        "id": "dal-periphery",
+        "name": "DAL periphery",
+        "thesis": "airport",
+        "why": "Testing watch",
+        "urls": []
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-104.746, 39.837]
+      },
+      "properties": {
+        "id": "den-king-ranch",
+        "name": "King Ranch / DEN Airport District (Aurora)",
+        "thesis": "airport",
+        "why": "Entitled industrial + highway access",
+        "urls": []
+      }
+    }
+  ]
+}
